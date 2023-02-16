@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:shayri/mainshayri.dart';
 import 'config.dart';
-
 class catagorys extends StatefulWidget {
   var pos;
   catagorys(this.pos);
-
   @override
   State<catagorys> createState() => _catagorysState();
 }
 
 class _catagorysState extends State<catagorys> {
   List <String>list = [];
+  List color=List.filled(Config.catagory.length, false);
   @override
   void initState() {
     // TODO: implement initState
@@ -26,12 +25,11 @@ class _catagorysState extends State<catagorys> {
       list = Config.bhagwan;
     }
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green.withOpacity(0.6),
+        backgroundColor: Colors.lightGreen,
         title: Text("${Config.catagory[widget.pos]}"),
         actions: [
           IconButton(
@@ -44,10 +42,7 @@ class _catagorysState extends State<catagorys> {
           IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
         ],
       ),
-      body: Container(
-        color: Colors.black12,
-        height: double.infinity,
-        width: double.infinity,
+      body: Scrollbar(
         child: ListView.builder(
           itemCount: list.length,
           itemBuilder: (context, index) {
@@ -56,15 +51,14 @@ class _catagorysState extends State<catagorys> {
               margin: EdgeInsets.only(top: 9, left: 8, right: 8),
               child: ListTile(
                 onTap:(){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => mainshayri(list,index,Config.catagory[widget.pos]),));
+                  Navigator.push(context, MaterialPageRoute(builder:(context) => mainshayri(list,index,Config.catagory[widget.pos]),));
                 },
                 leading: Padding(
                   padding: EdgeInsets.only(right: 10, top: 5, bottom: 5),
-                  child:
-                      Image.asset("assets/lists/${Config.photos[widget.pos]}"),
+                  child: Image.asset("assets/lists/${Config.photos[widget.pos]}"),
                 ),
-                title: Text("${Config.title1[index]}"),
-                subtitle: Text("${list[index]}", maxLines: 1,),
+                title: Text("${Config.emoji[index]}"),
+                subtitle: Text("${list[index]}",maxLines: 1),
                 trailing: Icon(Icons.navigate_next_rounded),
               ),
             );
