@@ -38,7 +38,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   clipboard:
   share_plus:
-
+  widgets_to_image:
+  external_path:
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -66,8 +67,23 @@ flutter:
     - assets/
     - assets/lists/
     - assets/3rd_page/
-
-  # An image asset can refer to one or more resolution-specific "variants", see
+  fonts:
+    - family: text0
+      fonts:
+        - asset: fonts/text0.ttf
+    - family: text1
+      fonts:
+        - asset: fonts/text1.ttf
+    - family: text2
+      fonts:
+        - asset: fonts/text2.ttf
+    - family: text3
+      fonts:
+        - asset: fonts/text3.ttf
+    - family: text4
+      fonts:
+        - asset: fonts/text4.ttf
+    # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
   # For details regarding adding assets from package dependencies, see

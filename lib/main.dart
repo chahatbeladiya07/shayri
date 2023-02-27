@@ -74,6 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
           },
         ),
       ),
+
       bottomNavigationBar: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

@@ -1,4 +1,15 @@
+import 'package:flutter/material.dart';
+
 class Config {
+  static List<List<Color>> grediant_colors = [
+    [Color (0xff415808), Color(0xffC858C8), Color (0xffFFCC78)],
+    [Color(0xff8EC5FC), Color (0xffEBC3FC)],
+    [Color(0xffD9AFD9), Color (0xff9709E1)],
+    [Color(0xff880BDE), Color (0xffFC88FF)],
+    [Color(0xffFBAB7E), Color (0xffF7CE68)],
+    [Color(0xff85FFBD), Color(0xffFFFB7D)],
+    [Color (0xff8BC6EC), Color(0xff9599E2)],
+  ];
   static List<String> photos = [
     "shubhkamna.png",
     "dosti.png",
@@ -58,6 +69,7 @@ class Config {
     "😗😙😚😛😜😝😞😠😡😢😣",
     "😰😱😲😴😷😸😹😺😻😼😽",
     "😾😿🙀💕💘💖💕💞💝💌",
+    "Without Emoji"
   ];
   static List<String> shubhkamna = [
     """ये इश्क भी एक अजीब एहसास होता है…
@@ -264,5 +276,29 @@ class Config {
   "Bhagwan ke charan mein, insaan ka jeevan safal hota hai.",
   "Bhagwan ke saath jeevan, dukh mukt ho jaata hai.",
   "Bhagwan se hi to, insaan ko uski zarurat milti hai."
+  ];
+  static List clr=<Color> [
+    Colors.yellow,
+    Colors.pink,
+    Colors.green,
+    Colors.yellowAccent,
+    Colors.teal,
+    Colors.purple,
+    Colors.indigo,
+    Colors.indigoAccent,
+    Colors.lightGreenAccent,
+    Colors.yellow.shade300,
+    Colors.pink.shade300,
+    Colors.green.shade300,
+    Colors.brown,
+    Colors.teal.shade300,
+    Colors.purple.shade300,
+    Colors.indigo.shade300,
+    Colors.black87,
+    Colors.black38,
+  ];
+  static List<String> texts=[
+    'text0', 'text1', 'text2', 'text3', 'text4', 'text0', 'text1', 'text2',
+    'text3', 'text4'
   ];
 }
